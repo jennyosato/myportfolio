@@ -66,7 +66,26 @@ function App() {
         </div>
       </section>
       {/* Project Section */}
-      <section></section>
+      <section>
+        <div>
+          <h2>ForFoods</h2>
+        </div>
+        <div>
+          <h2>ForStore</h2>
+        </div>
+        <div>
+          <h2>Showcaze</h2>
+        </div>
+        <div>
+          <h2>ChatMe</h2>
+        </div>
+        <div>
+          <h2>ForMovies</h2>
+        </div>
+        <div>
+          <h2>Listore</h2>
+        </div>
+      </section>
     </>
   );
 }
