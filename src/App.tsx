@@ -85,6 +85,9 @@ function App() {
         <div>
           <h2>Listore</h2>
         </div>
+        <div>
+          <h2>JapaAuction</h2>
+        </div>
       </section>
     </>
   );
