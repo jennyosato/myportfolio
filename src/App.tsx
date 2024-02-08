@@ -1,55 +1,48 @@
-import { useRef, useState } from "react";
-// import {BsLinkedin, BsTwitter, BsGithub} from 'react-icons/bs'
-import bgvideo from "../src/assets/bgvid.mp4";
-import Contact_form from "./components/contact_form";
 
 function App() {
-  const [isOpen, setIsopen] = useState(false)
-  const vidref = useRef<HTMLVideoElement>(null);
-  const playBack = () => {
-    vidref.current.playbackRate = 0.5;
-  };
+  
+  
 
   return (
     <>
-      <video
-        ref={vidref}
-        onCanPlay={playBack}
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute object-cover left-0 top-0 w-full -z-10 h-screen"
-      >
-        <source src={bgvideo} type="video/mp4" />
-      </video>
-      <header className="flex justify-evenly items-center shadow-md py-2 bg-black/60">
+    
+      <header className="flex justify-evenly items-center shadow-md py-6 bg-black/60">
         <div className="border-4 text-2xl">Jio</div>
-        <ul className="flex gap-4 font-semibold">
+        <ul className="flex items-center  gap-6 font-semibold">
           <li>
-            <a href="#" className="text-slate-600 font-bold">
+            <a href="#" className="text-white text-xl font-bold">
               Home
             </a>
           </li>
           <li>
-            <a href="#">Projects</a>
+            <a href="#" className="text-white text-xl font-bold">
+              Projects
+            </a>
           </li>
           <li>
-            <a href="#about_me">About Me</a>
+            <a href="#about_me" className="text-white text-xl font-bold">
+              About Me
+            </a>
           </li>
         </ul>
-        <button
-        onClick={() => setIsopen(true)} className="shadow-md hover:bg-gray-300 border-none outline-none focus:outline-none">
-          Contact Me
-        </button>
+       
       </header>
-      <Contact_form onOpen={isOpen} onClick={() => setIsopen(false)} />
-      {/* Intro section */}
-      <section className="bg-black/90 h-screen w-full flex justify-center items-center ">
-        <div className="w-8/12 h-72 filt rounded bg-white/20 text-center p-8 text-white">
-          <h2>Hello there!</h2>
-          <p>My name is Jennifer, i am a frontend developer</p>
+      <section>
+        <div className="w-20 h-20 rounded-full bg-black/50 animate-bubble">
+
         </div>
+      </section>
+      {/* Intro section */}
+      <section className="bg-black/90 h-screen w-full flex items-center  px-20">
+        
+        <div>
+          <h2>Hello there!</h2>
+          <span className="capitalize animate-typing text-4xl font-bold overflow-hidden border-r-[.15em] border-blue-500">
+            My name is Jennifer, <br/>i am a frontend developer
+          </span>
+        </div>
+   
+
       </section>
       {/* About Me Section */}
       <section id="about_me" className="py-10 ">
